@@ -81,10 +81,6 @@
       <Project>{88b3204d-9677-4007-9915-3367a58d41a8}</Project>
       <Name>TeduShop.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TeduShop.Data\TeduShop.Data.csproj">
-      <Project>{b8ea4dce-2077-4287-8939-730aed625dfe}</Project>
-      <Name>TeduShop.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
