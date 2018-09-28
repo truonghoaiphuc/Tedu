@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Model.Models
 {
-    [Table("MenuGroups")]
-    public class MenuGroup
+    [Table("SystemConfigs")]
+    public class SystemConfig
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-
         [Required]
         [MaxLength(50)]
-        public string Name { get; set; }
-
-        public virtual IEnumerable<Menu> Menus { get; set; }
+        [Column(TypeName ="varchar")]
+        public string Code { get; set; }
+        [MaxLength(256)]
+        public string ValueString { get; set; }
+        public int? ValueInt { get; set; }
     }
 }

@@ -8,17 +8,22 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Model.Models
 {
-    [Table("MenuGroups")]
-    public class MenuGroup
+    [Table("Slides")]
+    public class Slide
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
-
-        public virtual IEnumerable<Menu> Menus { get; set; }
+        [MaxLength(256)]
+        public string Description { get; set; }
+        [MaxLength(500)]
+        public string Image { get; set; }
+        [MaxLength(500)]
+        public string URL { get; set; }
+        public int? DisplayOrder { get; set; }
+        public bool Status { get; set; }
     }
 }
