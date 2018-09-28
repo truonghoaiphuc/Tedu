@@ -12,7 +12,7 @@ namespace TeduShop.Data.Repositories
     {
         IEnumerable<Product> GetByAlias(string alias);
     }
-    public class ProductRepository : RepositoryBase<Product>
+    public class ProductRepository : RepositoryBase<Product>, IProductRepository
     {
         public ProductRepository(IDbFactory dbFactory) 
             : base(dbFactory)

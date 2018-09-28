@@ -12,7 +12,7 @@ namespace TeduShop.Data.Repositories
     {
         
     }
-    public class PostCategoryRepository : RepositoryBase<PostCategory>
+    public class PostCategoryRepository : RepositoryBase<PostCategory>, IPostCategoryRepository
     {
         public PostCategoryRepository(IDbFactory dbFactory) 
             : base(dbFactory)
