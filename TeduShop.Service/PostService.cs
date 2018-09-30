@@ -8,11 +8,11 @@ namespace TeduShop.Service
 {
     public interface IPostService
     {
-        void Add(Post post);
+        Post Add(Post post);
 
         void Update(Post post);
 
-        void Delete(int id);
+        Post Delete(int id);
 
         IEnumerable<Post> GetAll();
 
@@ -21,6 +21,8 @@ namespace TeduShop.Service
         Post GetById(int id);
 
         IEnumerable<Post> GetAllByTagPaging(string tag, int page, int pagesize, out int totalRow);
+
+        IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow);
 
         void SaveChanges();
     }
@@ -35,14 +37,14 @@ namespace TeduShop.Service
             this._postRepository = postRepository;
             this._unitOfWork = unitOfWork;
         }
-        public void Add(Post post)
+        public Post Add(Post post)
         {
-            _postRepository.Add(post);
+           return _postRepository.Add(post);
         }
 
-        public void Delete(int id)
+        public Post Delete(int id)
         {
-            _postRepository.Delete(id);
+            return _postRepository.Delete(id);
         }
 
         public IEnumerable<Post> GetAll()
@@ -50,10 +52,15 @@ namespace TeduShop.Service
             return _postRepository.GetAll(new string[] { "PostCategory"});
         }
 
+        public IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow)
+        {
+            return _postRepository.GetMultiPaging(x => x.Status && x.CategoryID == categoryId, out totalRow, page,pageSize, new string[] { "PostCategory" });
+        }
+
         public IEnumerable<Post> GetAllByTagPaging(string tag, int page, int pagesize, out int totalRow)
         {
             //TODO: Select all post by Tag
-            return _postRepository.GetMultiPaging(x=>x.Status, out totalRow, page, pagesize);
+            return _postRepository.GetAllByTag(tag, page, pagesize, out totalRow);
         }
 
         public IEnumerable<Post> GetAllPaging(int page, int pagesize, out int totalRow)

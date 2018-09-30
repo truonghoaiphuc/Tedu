@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using TeduShop.Model.Models;
 
 namespace TeduShop.Data
@@ -32,9 +27,10 @@ namespace TeduShop.Data
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
 
+        public DbSet<Error> Errors { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder builder)
         {
-            
         }
     }
 }
