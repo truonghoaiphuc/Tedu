@@ -167,6 +167,7 @@ namespace TeduShop.Data.Migrations
                         CategoryID = c.Int(nullable: false),
                         Description = c.String(maxLength: 500),
                         Content = c.String(),
+                        Image = c.String(),
                         HomeFlag = c.Boolean(),
                         HotFlag = c.Boolean(),
                         ViewCount = c.Int(),

@@ -28,6 +28,7 @@ namespace TeduShop.Model.Models
         [MaxLength(500)]
         public string Description { get; set; }
         public string Content { get; set; }
+        public string Image { get; set; }
 
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }
