@@ -37,7 +37,7 @@ namespace TeduShop.Data
 
         protected override void OnModelCreating(DbModelBuilder builder)
         {
-            builder.Entity<IdentityUserRole>().HasKey(i => i.UserId);
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
             builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);            
         }
     }
