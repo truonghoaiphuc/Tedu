@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TeduShop.Web.Models
 {
     public class ProductCategoryViewModel
     {
         public int ID { get; set; }
+
+        [Required(ErrorMessage ="Yêu cầu nhập tên danh mục")]
         public string Name { get; set; }
+
+        [Required(ErrorMessage = "Yêu cầu nhập tiêu đề SEO")]
         public string Alias { get; set; }
         public string Description { get; set; }
         public int? ParentID { get; set; }
@@ -20,6 +25,8 @@ namespace TeduShop.Web.Models
         public string UpdatedBy { get; set; }
         public string MetaKeyword { get; set; }
         public string MetaDescription { get; set; }
+
+        [Required]
         public bool Status { get; set; }
 
         public virtual IEnumerable<ProductViewModel> Products { get; set; }
