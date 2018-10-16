@@ -283,6 +283,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+ckeditor@*, ckeditor@4.10.1:
+  version "4.10.1"
+  resolved "https://registry.yarnpkg.com/ckeditor/-/ckeditor-4.10.1.tgz#e0230b05a5470ef070be9ab9ba444fea418ebc78"
+  integrity sha512-T6y4BH9ml+0F1cuSqjOWSZJtNuunVm/IbZl0KWNgRUsWEiwQQxhzA0mvSVLzujjsQkTMn9oTGcDd31/eozCAWg==
+
 classie@>=0.0.1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/classie/-/classie-1.0.0.tgz#fc9b29b47e64e374a2062fb624d05a61cd703ab2"
@@ -621,7 +626,7 @@ isarray@~1.0.0:
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
 
-jquery@3.3.1, jquery@>=1.12.0, jquery@>=2.1.0:
+jquery@3.3.1, "jquery@>= 1.9.1", jquery@>=1.12.0, jquery@>=2.1.0:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
   integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
@@ -728,6 +733,14 @@ module-deps@^6.0.0:
     subarg "^1.0.0"
     through2 "^2.0.0"
     xtend "^4.0.0"
+
+ng-ckeditor@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/ng-ckeditor/-/ng-ckeditor-2.0.5.tgz#14ba19cb447b578305632f8ac4aa3811c80794b5"
+  integrity sha512-P0V8WWaCqpWHilj+FLF67+trjJXu58D79EGVd5x/NViw5UudSdVHyHfkPw1qcbxtb+AYSaryO6zmwtRDW3exPQ==
+  dependencies:
+    ckeditor "*"
+    jquery ">= 1.9.1"
 
 ngbootbox@0.2.0:
   version "0.2.0"
