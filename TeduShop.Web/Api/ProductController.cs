@@ -130,7 +130,7 @@ namespace TeduShop.Web.Api
                     dbProduct.UpdatedDate = DateTime.Now;
                     _productService.Update(dbProduct);
                     _productService.SaveChanges();
-                    var responseData = Mapper.Map<ProductCategory>(dbProduct);
+                    var responseData = Mapper.Map<Product>(dbProduct);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                 }
 

@@ -49,4 +49,4 @@
         loadProductCategory();
         loadProductDetail();
     }
-})(angular.module('tedushop.product_categories'));
+})(angular.module('tedushop.products'));

@@ -47,9 +47,11 @@
             <div class="row">
                 <table class="table table-bordered">
                     <tr>
-                        <th><input name="all" type="checkbox" ng-click="selectAll()" /></th>
+                        <th style="width:5%"><input name="all" type="checkbox" ng-click="selectAll()" /></th>
                         <th style="width: 5%">ID</th>
-                        <th style="width:50%">Tên danh mục</th>
+                        <th style="width:40%">Tên sản phẩm</th>
+                        <th style="width:10%">Giá</th>
+                        <th style="width:10%">Bảo hành</th>
                         <th style="width:10%">Ngày tạo</th>
                         <th style="width: 10%">Trạng thái</th>
                         <th style="width: 10%">Thao tác</th>
@@ -58,6 +60,8 @@
                         <td><input type="checkbox" name="all" ng-model="item.checked" /></td>
                         <td>{{item.ID}}</td>
                         <td>{{item.Name}}</td>
+                        <td>{{item.Price}}</td>
+                        <td>{{item.Warranty}} (tháng)</td>
                         <td>{{item.CreatedDate | date:'dd/MM/yyyy HH:mm:ss'}}</td>
                         <td><span ng-class="{'badge bg-red' : item.Status==false, 'badge bg-green' : item.Status==true}">{{item.Status | statusFilter}}</span></td>
                         <td>
