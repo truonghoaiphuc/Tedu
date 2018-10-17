@@ -60,7 +60,7 @@
                         <td><input type="checkbox" name="all" ng-model="item.checked" /></td>
                         <td>{{item.ID}}</td>
                         <td>{{item.Name}}</td>
-                        <td>{{item.Price}}</td>
+                        <td>{{item.Price | number:0}}</td>
                         <td>{{item.Warranty}} (tháng)</td>
                         <td>{{item.CreatedDate | date:'dd/MM/yyyy HH:mm:ss'}}</td>
                         <td><span ng-class="{'badge bg-red' : item.Status==false, 'badge bg-green' : item.Status==true}">{{item.Status | statusFilter}}</span></td>
@@ -71,7 +71,7 @@
                     </tr>
                     <tfoot>
                         <tr>
-                            <td colspan="5">
+                            <td colspan="8">
                                 <span class="pull-right"> Trang {{page+1}} - Tổng sổ bản ghi: {{totalCount}}</span>
                             </td>
                         </tr>

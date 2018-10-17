@@ -154,7 +154,7 @@ namespace TeduShop.Web.Api
                 {
                     var oldProduct =_productService.Delete(id);
                     _productService.SaveChanges();
-                    var responseData = Mapper.Map<ProductCategory>(oldProduct);
+                    var responseData = Mapper.Map<Product>(oldProduct);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                 }
 
