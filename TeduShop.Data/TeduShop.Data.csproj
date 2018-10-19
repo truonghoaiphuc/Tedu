@@ -61,17 +61,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RespositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201810090139077_initialDB.cs" />
-    <Compile Include="Migrations\201810090139077_initialDB.Designer.cs">
-      <DependentUpon>201810090139077_initialDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810090355255_Intergrate_ASPIdentity.cs" />
-    <Compile Include="Migrations\201810090355255_Intergrate_ASPIdentity.Designer.cs">
-      <DependentUpon>201810090355255_Intergrate_ASPIdentity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810100235288_ChangeKey.cs" />
-    <Compile Include="Migrations\201810100235288_ChangeKey.Designer.cs">
-      <DependentUpon>201810100235288_ChangeKey.cs</DependentUpon>
+    <Compile Include="Migrations\201810190330487_initialDB.cs" />
+    <Compile Include="Migrations\201810190330487_initialDB.Designer.cs">
+      <DependentUpon>201810190330487_initialDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,14 +102,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810090139077_initialDB.resx">
-      <DependentUpon>201810090139077_initialDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810090355255_Intergrate_ASPIdentity.resx">
-      <DependentUpon>201810090355255_Intergrate_ASPIdentity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810100235288_ChangeKey.resx">
-      <DependentUpon>201810100235288_ChangeKey.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810190330487_initialDB.resx">
+      <DependentUpon>201810190330487_initialDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,13 +7,13 @@ namespace TeduShop.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Intergrate_ASPIdentity : IMigrationMetadata
+    public sealed partial class initialDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Intergrate_ASPIdentity));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810090355255_Intergrate_ASPIdentity"; }
+            get { return "201810190330487_initialDB"; }
         }
         
         string IMigrationMetadata.Source

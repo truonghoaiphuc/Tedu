@@ -22,6 +22,8 @@ namespace TeduShop.Web.Models
         public bool? HotFlag { get; set; }
         public int? ViewCount { get; set; }
 
+        public string Tag { get; set; }
+
         public DateTime? CreatedDate { get; set; }
         public string CreatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
