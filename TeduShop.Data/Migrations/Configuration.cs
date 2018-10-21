@@ -18,36 +18,36 @@
 
         protected override void Seed(TeduShop.Data.TeduShopDbContext context)
         {
-            CreateProductCategorySample(context);
+            //CreateProductCategorySample(context);
 
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
 
-            //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new TeduShopDbContext()));
-            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new TeduShopDbContext()));
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new TeduShopDbContext()));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new TeduShopDbContext()));
 
-            //var user = new ApplicationUser()
-            //{
-            //    UserName = "phucth",
-            //    Email = "phucvsd@gmail.com",
-            //    EmailConfirmed = true,
-            //    Birthday = DateTime.Now,
-            //    FullName = "Trương Hoài Phúc"
+            var user = new ApplicationUser()
+            {
+                UserName = "phucth",
+                Email = "phucvsd@gmail.com",
+                EmailConfirmed = true,
+                Birthday = DateTime.Now,
+                FullName = "Trương Hoài Phúc"
 
-            //};
-            //manager.Create(user, "123654$");
+            };
+            manager.Create(user, "123654$");
 
-            //if(!roleManager.Roles.Any())
-            //{
-            //    roleManager.Create(new IdentityRole { Name = "Admin" });
-            //    roleManager.Create(new IdentityRole { Name = "User" });
-            //}
+            if (!roleManager.Roles.Any())
+            {
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
+            }
 
-            //var adminUser = manager.FindByEmail("phucvsd@gmail.com");
+            var adminUser = manager.FindByEmail("phucvsd@gmail.com");
 
-            //manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
+            manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }
 
         private void CreateProductCategorySample(TeduShop.Data.TeduShopDbContext context)

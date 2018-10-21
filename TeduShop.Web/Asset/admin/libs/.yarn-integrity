@@ -6,6 +6,8 @@
   "flags": [],
   "linkedModules": [],
   "topLevelPatterns": [
+    "angular-loading-bar@0.9.0",
+    "angular-local-storage@^0.7.1",
     "angular-ui-router@0.4.2",
     "angular@1.7.5",
     "bootbox@^4.4.0",
@@ -27,6 +29,8 @@
     "acorn-node@^1.5.2": "https://registry.yarnpkg.com/acorn-node/-/acorn-node-1.6.0.tgz#725c6b8b432451383b5d2816a18a5ab13288aa58",
     "acorn-walk@^6.0.1": "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-6.1.0.tgz#c957f4a1460da46af4a0388ce28b4c99355b0cbc",
     "acorn@^6.0.1": "https://registry.yarnpkg.com/acorn/-/acorn-6.0.2.tgz#6a459041c320ab17592c6317abbfdf4bbaa98ca4",
+    "angular-loading-bar@0.9.0": "https://registry.yarnpkg.com/angular-loading-bar/-/angular-loading-bar-0.9.0.tgz#37ef52c25f102c216e7b3cdfd2fc5a5df9628e45",
+    "angular-local-storage@^0.7.1": "https://registry.yarnpkg.com/angular-local-storage/-/angular-local-storage-0.7.1.tgz#fbd2730763c29fa9af5725e0186c780621e8cdd2",
     "angular-ui-router@0.4.2": "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-0.4.2.tgz#b6aed1ca69a683c82e3992898eabd4ba15868608",
     "angular@1.7.5": "https://registry.yarnpkg.com/angular/-/angular-1.7.5.tgz#d1c1c01c6f5dc835638f3f9aa51012857bdac49e",
     "angular@>=1.3.0": "https://registry.yarnpkg.com/angular/-/angular-1.7.5.tgz#d1c1c01c6f5dc835638f3f9aa51012857bdac49e",

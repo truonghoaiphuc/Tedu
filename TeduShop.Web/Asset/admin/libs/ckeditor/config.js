@@ -13,7 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
 		{ name: 'links' },
-        { name: 'insert' },
+		{ name: 'insert' },
 		{ name: 'forms' },
 		{ name: 'tools' },
 		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
@@ -34,10 +34,5 @@ CKEDITOR.editorConfig = function( config ) {
 	config.format_tags = 'p;h1;h2;h3;pre';
 
 	// Simplify the dialog windows.
-    config.removeDialogTabs = 'image:advanced;link:advanced';
-
-    filebrowserBrowseUrl: '/Asset/admin/libs/ckfinder/ckfinder.html';
-    filebrowserUploadUrl: '/Asset/admin/libs/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files';
-    filebrowserWindowWidth: '1000';
-    filebrowserWindowHeight: '700';
+	config.removeDialogTabs = 'image:advanced;link:advanced';
 };

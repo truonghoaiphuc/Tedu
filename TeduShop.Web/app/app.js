@@ -27,6 +27,6 @@
                 controller: "homeController"
         });
 
-        $urlRouterProvider.otherwise('/admin');
+        $urlRouterProvider.otherwise('/login');
     }
 })();

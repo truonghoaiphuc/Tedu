@@ -258,6 +258,7 @@
     <Content Include="app\app.js" />
     <Content Include="app\components\home\homeController.js" />
     <Content Include="app\components\home\homeView.html" />
+    <Content Include="app\components\home\rootController.js" />
     <Content Include="app\components\login\loginController.js" />
     <Content Include="app\components\login\loginView.html" />
     <Content Include="app\components\products\product.module.js" />
@@ -350,6 +351,31 @@
     <Content Include="Asset\admin\js\demo.js" />
     <Content Include="Asset\admin\js\pages\dashboard.js" />
     <Content Include="Asset\admin\js\pages\dashboard2.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\build\loading-bar.css" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\build\loading-bar.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\build\loading-bar.min.css" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\build\loading-bar.min.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\example\app.css" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\example\app.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\example\index.html" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\Gruntfile.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\index.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\src\loading-bar.css" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\src\loading-bar.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\test\karma-angular-1.2.conf.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\test\karma-angular-1.3.conf.js" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\test\karma-angular-1.4.conf.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\demo\demo-app.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\demo\demo-style.css" />
+    <Content Include="Asset\admin\libs\angular-local-storage\demo\demo.html" />
+    <Content Include="Asset\admin\libs\angular-local-storage\dist\angular-local-storage.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\dist\angular-local-storage.min.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\Gruntfile.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\index.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\src\angular-local-storage.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\test\karma.conf.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\test\mock\localStorageMock.js" />
+    <Content Include="Asset\admin\libs\angular-local-storage\test\spec\localStorageSpec.js" />
     <Content Include="Asset\admin\libs\angular-ui-router\CHANGELOG.md" />
     <Content Include="Asset\admin\libs\angular-ui-router\CONTRIBUTING.md" />
     <Content Include="Asset\admin\libs\angular-ui-router\LICENSE" />
@@ -5692,7 +5718,34 @@
     <Content Include="Asset\admin\libs\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Asset\admin\libs\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Asset\admin\libs\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="packages.config" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\.editorconfig" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\.jshintrc" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\.npmignore" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\bower.json" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\CHANGELOG.md" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\CONTRIBUTING.md" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\ISSUE_TEMPLATE.md" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\LICENSE" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\package.json" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\README.md" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\test\loading-bar-interceptor-config.coffee" />
+    <Content Include="Asset\admin\libs\angular-loading-bar\test\loading-bar-interceptor.coffee" />
+    <Content Include="Asset\admin\libs\angular-local-storage\.bowerrc" />
+    <Content Include="Asset\admin\libs\angular-local-storage\.editorconfig" />
+    <Content Include="Asset\admin\libs\angular-local-storage\.gitattributes" />
+    <Content Include="Asset\admin\libs\angular-local-storage\.npmignore" />
+    <Content Include="Asset\admin\libs\angular-local-storage\.travis.yml" />
+    <Content Include="Asset\admin\libs\angular-local-storage\bower.json" />
+    <Content Include="Asset\admin\libs\angular-local-storage\CHANGELOG.md" />
+    <Content Include="Asset\admin\libs\angular-local-storage\dist\angular-local-storage.min.js.map" />
+    <Content Include="Asset\admin\libs\angular-local-storage\LICENSE" />
+    <Content Include="Asset\admin\libs\angular-local-storage\package.json" />
+    <Content Include="Asset\admin\libs\angular-local-storage\README.md" />
+    <Content Include="Asset\admin\libs\angular-local-storage\test\.jshintrc" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
