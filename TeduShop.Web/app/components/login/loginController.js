@@ -3,13 +3,13 @@
         function ($scope, loginService, $injector, notificationService) {
 
             $scope.loginData = {
-                username: "",
+                userName: "",
                 password: ""
             };
 
             $scope.loginSubmit = function () {
-                loginService.login($scope.loginData.username, $scope.loginData.password).then(function (response) {
-                    if (response != null && response.error != undefined) {
+                loginService.login($scope.loginData.userName, $scope.loginData.password).then(function (response) {
+                    if (response != null && response.data.error != undefined) {
                         notificationService.displayError("Đăng nhập không đúng.");
                     }
                     else {
@@ -20,4 +20,3 @@
             }
         }]);
 })(angular.module('tedushop'));
-//cách viết mới

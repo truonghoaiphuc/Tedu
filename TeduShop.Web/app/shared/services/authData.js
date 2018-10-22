@@ -1,18 +1,14 @@
-﻿//cách viết mới tương tự cách viết các module kia
-(function (app) {
+﻿(function (app) {
     'use strict';
-    app.factory('authData', [
-        function () {
-            var authDataFactory = {};
+    app.factory('authData', [function () {
+        var authDataFactory = {};
 
-            var authentication = {
-                isAuthenticated: false,
-                username: ""
-            };
+        var authentication = {
+            IsAuthenticated: false,
+            userName: ""
+        };
+        authDataFactory.authenticationData = authentication;
 
-            authDataFactory.authenticationData = authentication;
-
-            return authDataFactory;
-        }
-    ]);
+        return authDataFactory;
+    }]);
 })(angular.module('tedushop.common'));
