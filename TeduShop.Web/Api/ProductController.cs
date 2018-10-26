@@ -102,6 +102,7 @@ namespace TeduShop.Web.Api
                     var newProduct = new Product();
                     newProduct.UpdateProduct(productvm);
                     newProduct.CreatedDate = DateTime.Now;
+                    newProduct.CreatedBy = User.Identity.Name;
                     _productService.Add(newProduct);
                     _productService.SaveChanges();
                     var responseData = Mapper.Map<Product>(newProduct);
@@ -129,6 +130,7 @@ namespace TeduShop.Web.Api
                     var dbProduct = _productService.GetById(productvm.ID);
                     dbProduct.UpdateProduct(productvm);
                     dbProduct.UpdatedDate = DateTime.Now;
+                    dbProduct.UpdatedBy = User.Identity.Name;
                     _productService.Update(dbProduct);
                     _productService.SaveChanges();
                     var responseData = Mapper.Map<Product>(dbProduct);

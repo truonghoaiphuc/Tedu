@@ -102,6 +102,7 @@ namespace TeduShop.Web.Api
                     var newProductCategory = new ProductCategory();
                     newProductCategory.UpdateProductCategory(productCategoryvm);
                     newProductCategory.CreatedDate = DateTime.Now;
+                    newProductCategory.CreatedBy = User.Identity.Name;
                     _productCategoryService.Add(newProductCategory);
                     _productCategoryService.SaveChanges();
                     var responseData = Mapper.Map<ProductCategory>(newProductCategory);
@@ -129,6 +130,7 @@ namespace TeduShop.Web.Api
                     var dbProductCategory = _productCategoryService.GetById(productCategoryvm.ID);
                     dbProductCategory.UpdateProductCategory(productCategoryvm);
                     dbProductCategory.UpdatedDate = DateTime.Now;
+                    dbProductCategory.UpdatedBy = User.Identity.Name;
                     _productCategoryService.Update(dbProductCategory);
                     _productCategoryService.SaveChanges();
                     var responseData = Mapper.Map<ProductCategory>(dbProductCategory);

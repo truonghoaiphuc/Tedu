@@ -5308,6 +5308,67 @@
     <Content Include="Asset\admin\libs\toastr\tests\unit\x.js" />
     <Content Include="Asset\admin\libs\toastr\toastr-icon.png" />
     <Content Include="Asset\admin\libs\toastr\toastr.js" />
+    <Content Include="Asset\client\css\bootstrap.css" />
+    <Content Include="Asset\client\css\etalage.css" />
+    <Content Include="Asset\client\css\form.css" />
+    <Content Include="Asset\client\css\style.css" />
+    <Content Include="Asset\client\images\a-star.png" />
+    <Content Include="Asset\client\images\arrow1.png" />
+    <Content Include="Asset\client\images\arrow2.png" />
+    <Content Include="Asset\client\images\avatar.png" />
+    <Content Include="Asset\client\images\b-arrow.png" />
+    <Content Include="Asset\client\images\ba.jpg" />
+    <Content Include="Asset\client\images\baa.jpg" />
+    <Content Include="Asset\client\images\bag.jpg" />
+    <Content Include="Asset\client\images\bag1.jpg" />
+    <Content Include="Asset\client\images\bo.jpg" />
+    <Content Include="Asset\client\images\bott.jpg" />
+    <Content Include="Asset\client\images\bottle.jpg" />
+    <Content Include="Asset\client\images\ch.jpg" />
+    <Content Include="Asset\client\images\facebook.png" />
+    <Content Include="Asset\client\images\gpluse.png" />
+    <Content Include="Asset\client\images\img-sprite.png" />
+    <Content Include="Asset\client\images\label_new.png" />
+    <Content Include="Asset\client\images\logo.png" />
+    <Content Include="Asset\client\images\pi.jpg" />
+    <Content Include="Asset\client\images\pi1.jpg" />
+    <Content Include="Asset\client\images\pi2.jpg" />
+    <Content Include="Asset\client\images\pi3.jpg" />
+    <Content Include="Asset\client\images\pi4.jpg" />
+    <Content Include="Asset\client\images\pic.jpg" />
+    <Content Include="Asset\client\images\pic1.jpg" />
+    <Content Include="Asset\client\images\pic10.jpg" />
+    <Content Include="Asset\client\images\pic11.jpg" />
+    <Content Include="Asset\client\images\pic12.jpg" />
+    <Content Include="Asset\client\images\pic13.jpg" />
+    <Content Include="Asset\client\images\pic2.jpg" />
+    <Content Include="Asset\client\images\pic3.jpg" />
+    <Content Include="Asset\client\images\pic4.jpg" />
+    <Content Include="Asset\client\images\pic5.jpg" />
+    <Content Include="Asset\client\images\pic6.jpg" />
+    <Content Include="Asset\client\images\pic7.jpg" />
+    <Content Include="Asset\client\images\pic8.jpg" />
+    <Content Include="Asset\client\images\review.png" />
+    <Content Include="Asset\client\images\rss.png" />
+    <Content Include="Asset\client\images\s1.jpg" />
+    <Content Include="Asset\client\images\s2.jpg" />
+    <Content Include="Asset\client\images\s3.jpg" />
+    <Content Include="Asset\client\images\s4.jpg" />
+    <Content Include="Asset\client\images\sh.jpg" />
+    <Content Include="Asset\client\images\si1.jpg" />
+    <Content Include="Asset\client\images\si2.jpg" />
+    <Content Include="Asset\client\images\si3.jpg" />
+    <Content Include="Asset\client\images\si4.jpg" />
+    <Content Include="Asset\client\images\star.png" />
+    <Content Include="Asset\client\images\tick1.png" />
+    <Content Include="Asset\client\images\twitter.png" />
+    <Content Include="Asset\client\images\wa.jpg" />
+    <Content Include="Asset\client\images\wat.jpg" />
+    <Content Include="Asset\client\images\zoom.png" />
+    <Content Include="Asset\client\js\jquery.etalage.min.js" />
+    <Content Include="Asset\client\js\jquery.flexisel.js" />
+    <Content Include="Asset\client\js\jquery.min.js" />
+    <Content Include="Asset\client\js\jquery.wmuSlider.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -5329,7 +5390,6 @@
     <Folder Include="app\components\users\" />
     <Folder Include="app\shared\footer\" />
     <Folder Include="app\shared\navigation\" />
-    <Folder Include="Asset\client\" />
     <Folder Include="UploadedFile\" />
   </ItemGroup>
   <ItemGroup>
@@ -5747,10 +5807,16 @@
     <Content Include="Asset\admin\libs\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Asset\admin\libs\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Asset\admin\libs\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="ConnectionString.config" />
+    <Content Include="AppSettings.config" />
+    <Content Include="Asset\client\images\Thumbs.db" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\Layouts.cshtml" />
+    <Content Include="Resources\bigshope-web.zip" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">
