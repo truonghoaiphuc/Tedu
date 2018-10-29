@@ -10,5 +10,6 @@ namespace TeduShop.Common
     {
         public const string ProductTag = "product";
         public const string PostTag = "tag";
+        public const string DefaultFooterId = "default";
     }
 }

@@ -25,5 +25,6 @@ namespace TeduShop.Model.Models
         public string URL { get; set; }
         public int? DisplayOrder { get; set; }
         public bool Status { get; set; }
+        public string Content { get; set; }
     }
 }
