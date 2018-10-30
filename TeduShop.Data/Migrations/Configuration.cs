@@ -89,7 +89,26 @@
             {
                 List<Slide> listslide = new List<Slide>()
                 {
-                    new Slide(){ Name="Slide 1", DisplayOrder=1,Status=true,Image="" }
+                    new Slide(){
+                        Name ="Slide 1"
+                        , DisplayOrder=1,Status=true
+                        ,URL="#"
+                        ,Image="/Asset/client/images/bag.jpg"
+                        ,Content=@"<h2>FLAT 50% 0FF</h2>
+								<label>FOR ALL PURCHASE <b>VALUE</b></label>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et </p>					
+								<span class=""on-get"">GET NOW</span>" },
+                    new Slide(){
+                        Name ="Slide 2"
+                        , DisplayOrder=1
+                        ,Status=true
+                        ,URL="#"
+                        ,Image="/Asset/client/images/bag1.jpg"
+                        ,Content=@"<h2>FLAT 50% 0FF</h2>
+								<label>FOR ALL PURCHASE <b>VALUE</b></label>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et </p>					
+								<span class=""on-get"">GET NOW</span>"
+                    }
                 };
                 context.Slides.AddRange(listslide);
                 context.SaveChanges();
