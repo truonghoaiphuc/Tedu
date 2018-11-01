@@ -13,6 +13,8 @@ namespace TeduShop.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 name: "Login",
                 url: "Dang-nhap.html",
@@ -29,14 +31,14 @@ namespace TeduShop.Web
 
             routes.MapRoute(
                 name: "Product Category",
-                url: "{alias}.pc-{id}.html",
+                url: "{Alias}.pc-{id}.html",
                 defaults: new { controller = "Product", action = "Category", id = UrlParameter.Optional },
                 namespaces: new string[] { "TeduShop.Web.Controllers" }
             );
 
             routes.MapRoute(
                 name: "Product",
-                url: "{alias}.p-{id}.html",
+                url: "{Alias}.p-{id}.html",
                 defaults: new { controller = "Product", action = "Detail", id = UrlParameter.Optional },
                 namespaces: new string[] { "TeduShop.Web.Controllers" }
             );
