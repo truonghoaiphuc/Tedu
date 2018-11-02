@@ -27,6 +27,10 @@ namespace TeduShop.Service
 
         IEnumerable<Product> GetListProductByCategoryIdPaging(int categoryId, int page, int pageSize,string sort, out int totalRow);
 
+        IEnumerable<Product> Search(string keyword, int page, int pageSize, string sort, out int totalRow);
+
+        IEnumerable<string> GetListProductByName(string name);
+
         Product GetById(int id);
 
         void SaveChanges();
@@ -142,9 +146,39 @@ namespace TeduShop.Service
             return query.Skip((page - 1) * pageSize).Take(pageSize);
         }
 
+        public IEnumerable<string> GetListProductByName(string name)
+        {
+            return _productRepository.GetMulti(x => x.Status && x.Name.Contains(name)).Select(y=>y.Name);
+        }
+
         public void SaveChanges()
         {
             _unitOfWork.Commit();
+        }
+
+        public IEnumerable<Product> Search(string keyword, int page, int pageSize, string sort, out int totalRow)
+        {
+            var query = _productRepository.GetMulti(x => x.Status == true && x.Name.Contains(keyword));
+
+            switch (sort)
+            {
+                case "popular":
+                    query = query.OrderByDescending(x => x.ViewCount);
+                    break;
+                case "discount":
+                    query = query.OrderByDescending(x => x.Promotion);
+                    break;
+                case "price":
+                    query = query.OrderBy(x => x.Price);
+                    break;
+                default:
+                    query = query.OrderByDescending(x => x.CreatedDate);
+                    break;
+            }
+
+            totalRow = query.Count();
+
+            return query.Skip((page - 1) * pageSize).Take(pageSize);
         }
 
         public void Update(Product product)
