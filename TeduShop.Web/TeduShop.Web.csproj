@@ -6019,6 +6019,7 @@
     <Content Include="Asset\admin\libs\toastr\toastr-icon.png" />
     <Content Include="Asset\admin\libs\toastr\toastr.js" />
     <Content Include="Asset\client\css\bootstrap.css" />
+    <Content Include="Asset\client\css\custom.css" />
     <Content Include="Asset\client\css\etalage.css" />
     <Content Include="Asset\client\css\form.css" />
     <Content Include="Asset\client\css\style.css" />
@@ -6544,6 +6545,7 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Product\Search.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Product\ListByTag.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">

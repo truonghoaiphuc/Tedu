@@ -33,7 +33,15 @@ namespace TeduShop.Service
 
         IEnumerable<Product> GetRelatedProduct(int id, int top);
 
+        IEnumerable<Tag> GetListTagByProductId(int id);
+
+        void IncreaseView(int id);
+
+        IEnumerable<Product> GetListProductByTag(string TagId, int page, int pageSize, out int totalRow);
+
         Product GetById(int id);
+
+        Tag GetTag(string tagid);
 
         void SaveChanges();
     }
@@ -153,10 +161,34 @@ namespace TeduShop.Service
             return _productRepository.GetMulti(x => x.Status && x.Name.Contains(name)).Select(y=>y.Name);
         }
 
+        public IEnumerable<Product> GetListProductByTag(string TagId, int page, int pageSize, out int totalRow)
+        {            
+           return _productRepository.GetListProductByTag(TagId, page, pageSize, out totalRow);            
+        }
+
+        public IEnumerable<Tag> GetListTagByProductId(int id)
+        {
+            return _productTagRepository.GetMulti(x => x.ProductID == id, new string[] { "Tag" }).Select(y => y.Tag);
+        }
+
         public IEnumerable<Product> GetRelatedProduct(int id, int top)
         {
             var product = _productRepository.GetSingleById(id);
             return _productRepository.GetMulti(x => x.Status && x.ID != id && x.CategoryID==product.CategoryID).OrderByDescending(x => x.CreatedDate).Take(top);
+        }
+
+        public Tag GetTag(string tagid)
+        {
+            return _tagRepository.GetSingleByCondition(x => x.ID == tagid);
+        }
+
+        public void IncreaseView(int id)
+        {
+            var product = _productRepository.GetSingleById(id);
+            if (product.ViewCount.HasValue)
+                product.ViewCount += 1;
+            else
+                product.ViewCount = 1;
         }
 
         public void SaveChanges()

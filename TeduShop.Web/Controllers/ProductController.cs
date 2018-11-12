@@ -33,6 +33,9 @@ namespace TeduShop.Web.Controllers
             
             List<string> listImages = new JavaScriptSerializer().Deserialize<List<string>>(productViewModel.MoreImages);
             ViewBag.moreImages = listImages;
+
+            ViewBag.Tags = Mapper.Map<IEnumerable<Tag>, IEnumerable<TagViewModel>>( _productService.GetListTagByProductId(id));
+
             return View(productViewModel);
         }
 
@@ -77,6 +80,25 @@ namespace TeduShop.Web.Controllers
             return View(paginationSet);
         }
 
+        public ActionResult ListByTag(string tagid, int page=1)
+        {
+            int pageSize = Convert.ToInt32(ConfigHelper.GetByKey("PageSize"));
+            int totalRow = 0;
+            var productModel = _productService.GetListProductByTag(tagid, page, pageSize, out totalRow);
+            var productViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(productModel);
+            int totalPage = (int)Math.Ceiling((double)totalRow / pageSize);
+
+            ViewBag.Tag = Mapper.Map<Tag, TagViewModel>( _productService.GetTag(tagid));
+            var paginationSet = new PaginationSet<ProductViewModel>()
+            {
+                Items = productViewModel,
+                MaxPage = Convert.ToInt32(ConfigHelper.GetByKey("MaxPage")),
+                Page = page,
+                TotalCount = totalRow,
+                TotalPages = totalPage
+            };
+            return View(paginationSet);
+        }
 
         public JsonResult GetListProductByName(string keyword)
         {
