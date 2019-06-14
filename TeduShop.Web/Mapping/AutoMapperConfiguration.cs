@@ -17,6 +17,7 @@ namespace TeduShop.Web.Mapping
                 cfg.CreateMap<PostCategory, PostCategoryViewModel>();
                 cfg.CreateMap<Tag, TagViewModel>();
                 cfg.CreateMap<PostTag, PostTagViewModel>();
+                cfg.CreateMap<ContactDetail, ContactDetailViewModel>();
             }); 
         }
     }

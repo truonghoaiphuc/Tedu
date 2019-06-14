@@ -115,5 +115,31 @@
 
             }
         }
+
+        private void CreateContactDetail(TeduShopDbContext context)
+        {
+            if(context.ContactDetails.Count()==0)
+            {
+                try
+                {
+                    var contact = new TeduShop.Model.Models.ContactDetail()
+                    {
+                        Name = "Shop Trương Hoài Phúc",
+                        Phone = "0979778828",
+                        Email = "phucth@vsd.vn",
+                        Address = "151 Nguyễn Đình Chiểu P6 Q3 TPHCM",
+                        Lat = 10.7761264,
+                        Lng = 106.6858901,
+                        Website = "vsd.vn",
+                        Other = "",
+                        Status = true
+                    };
+                    context.ContactDetails.Add(contact);
+                    context.SaveChanges();
+                }
+                catch
+                { }
+            }
+        }
     }
 }

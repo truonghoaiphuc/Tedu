@@ -239,6 +239,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
@@ -249,6 +250,7 @@
     <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Mapping\AutoMapperConfiguration.cs" />
     <Compile Include="Mapping\MappingProfile.cs" />
+    <Compile Include="Models\ContactDetailViewModel.cs" />
     <Compile Include="Models\FooterViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\PostCategoryViewModel.cs" />
@@ -6077,6 +6079,7 @@
     <Content Include="Asset\client\images\wat.jpg" />
     <Content Include="Asset\client\images\zoom.png" />
     <Content Include="Asset\client\js\common.js" />
+    <Content Include="Asset\client\js\controller\contact.js" />
     <Content Include="Asset\client\js\jquery.etalage.min.js" />
     <Content Include="Asset\client\js\jquery.flexisel.js" />
     <Content Include="Asset\client\js\jquery.min.js" />
@@ -6546,6 +6549,7 @@
     <Content Include="Views\Product\Search.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Product\ListByTag.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">

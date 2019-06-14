@@ -1,0 +1,85 @@
+﻿@model TeduShop.Web.Models.ContactDetailViewModel
+
+@{
+    ViewBag.Title = "Liên hệ";
+    Layout = "~/Views/Shared/Layouts.cshtml";
+}
+
+@section footerJS{
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_6wIFoCPEZG9vJqoMz_QvcimviMdIjKQ">
+    </script>
+    <script src="~/Asset/client/js/controller/contact.js"></script>
+}
+
+    <style>
+         /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+         #map {
+             height: 100%;
+         }
+         /* Optional: Makes the sample page fill the window. */
+         html, body {
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+    </style>
+<h2>Index</h2>
+
+<input type="hidden" id="hidAddress" value="@Model.Address" />
+<input type="hidden" id="hidLat" value="@Model.Lat" />
+<input type="hidden" id="hidLng" value="@Model.Lng" />
+<div class="main">
+    <div class="reservation_top">
+        <div class=" contact_right">
+            <h3>Thông tin liên hệ</h3>
+            <address class="address">
+                <p>@Model.Address</p>
+                <dl>
+                    <dt> </dt>
+                    <dd>Freephone:<span> @Model.Phone</span></dd>
+                    <dd>Telephone:<span> +1 800 547 5478</span></dd>
+                    <dd>FAX: <span>+1 800 658 5784</span></dd>
+                    <dd>E-mail:&nbsp; <a href="mailto:@(Model.Email)">@Model.Email</a></dd>
+                </dl>
+            </address>
+            <div class="clearfix"></div>
+            <div id="map"></div>
+            <div class="contact-form">
+                <form method="post" action="contact-post.html">
+                    <input type="text" class="textbox" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                    <input type="text" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                    <textarea value="Message" onfocus="this.value= '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+                    <input type="submit" value="Send">
+                    <div class="clearfix"> </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="reservation_top">
+        <div class=" contact_right">
+            <h3>Contact Form</h3>
+            <div class="contact-form">
+                <form method="post" action="contact-post.html">
+                    <input type="text" class="textbox" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                    <input type="text" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                    <textarea value="Message" onfocus="this.value= '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+                    <input type="submit" value="Send">
+                    <div class="clearfix"> </div>
+                </form>
+                <address class="address">
+                    <p>9870 St Vincent Place, <br>Glasgow, DC 45 Fr 45.</p>
+                    <dl>
+                        <dt> </dt>
+                        <dd>Freephone:<span> +1 800 254 2478</span></dd>
+                        <dd>Telephone:<span> +1 800 547 5478</span></dd>
+                        <dd>FAX: <span>+1 800 658 5784</span></dd>
+                        <dd>E-mail:&nbsp; <a href="mailto@vintage.com">info(at)bigshop.com</a></dd>
+                    </dl>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>

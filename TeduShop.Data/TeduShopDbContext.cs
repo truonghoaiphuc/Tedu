@@ -31,6 +31,8 @@ namespace TeduShop.Data
 
         public DbSet<Error> Errors { get; set; }
 
+        public DbSet<ContactDetail> ContactDetails { get; set; }
+
         public static TeduShopDbContext Create()
         {
             return new TeduShopDbContext();
